@@ -1,15 +1,297 @@
 ﻿@inherits LayoutComponentBase
 
-<div class="sidebar">
-    <NavMenu />
-</div>
+    <div class="fakeloader"></div>
+    <div class="wrapper boxed--layout" id="wrapper" ng-app="timeCalc" ng-controller="CtrlTimeCalc as timeCalc">
+        <!-- Header -->
+        <header id="header-area" class="header-area sticky--header">
+            <div class="header header--style-2">
+                <!-- Header Top Area <-->
+                <div class="header__top bg--white">
+                    <div class="container">
+                        
+                    </div>
+                </div><!-- //Header Top Area -->
+                <!-- Header Bottom Area -->
+                <div class="header__bottom bg--theme">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <!-- Main naviagtion -->
+                                <nav class="menu">
+                                    <ul class="justify-content-center">
+                                        <li>
+                                            <a href="/">HOME</a>
+                                            @*<ul class="cr-dropdown-menu">
+                                                <li><a href="index.html">Homepage Classic</a></li>
+                                                <li><a href="index-boxed.html">Homepage Boxed</a></li>
+                                                <li><a href="index-2.html">Homepage Style 2</a></li>
+                                                <li><a href="index-slider.html">Homepage Slider</a></li>
+                                                <li><a href="index-text-slider.html">Homepage Text Slider</a></li>
+                                            </ul>*@
+                                        </li>
+                                        <li><a href="about-us.html">ABOUT</a></li>
+                                    
+                                        <li><a href="donation.html">DONATION</a></li>
+                                     
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav><!-- //Main naviagtion -->
+                                <!-- Mobile Menu -->
+                                <div class="mobile-menu hidden-lg hidden-xlg hidden-xx hidden-sp">
+                                    <a class="mobile-logo" href="/"><img src="images/logo/mobile-logo.png" alt="logo"></a>
+                                </div><!-- //Mobile Menu -->
 
-<div class="main">
-    <div class="top-row px-4">
-        <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-    </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <div class="content px-4">
+                </div>
+                <!-- //Header Bottom Area -->
+            </div>
+        </header><!-- //Header -->
+        <!-- Page Conent -->
+        <main class="page-content">
+        </main><!-- //Page Conent -->
+
+
         @Body
+        <footer id="footer" class="footer-area">
+
+            <!-- Footer Widgets -->
+            <div class="footer__widgets ptb--100 bg--dark--light" style="display:none">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="widgets footer--widgets d-flex justify-content-between flex-md-wrap flex-wrap flex-lg-nowrap">
+
+                                <!-- Single Widgets -->
+                                <div class="single-widget widget--details">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <img src="images/logo/logo-dark.png" alt="footer logo">
+                                        </a>
+                                    </div>
+                                    <p>Islam is the know how to pursue pleasure rationally encounter consequences</p>
+                                    <div class="social-icons social-icons--rounded">
+                                        <ul>
+                                            <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                            <li class="twitter"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                                            <li class="instagram"><a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a></li>
+                                            <li class="google-plus"><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div><!-- //Single Widgets -->
+                                <!-- Single Widgets -->
+                                <div class="single-widget widget--support">
+                                    <h4 class="widget-title">Support</h4>
+                                    <ul>
+                                        <li><a href="about-us.html">About us</a></li>
+                                        <li><a href="#">Help Center</a></li>
+                                        <li><a href="shop-right-sidebar.html">Shop now</a></li>
+                                        <li><a href="blogs-right-sidebar.html">Latest Blog</a></li>
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </div><!-- //Single Widgets -->
+                                <!-- Single Widgets -->
+                                <div class="single-widget widget--contact">
+                                    <h4 class="widget-title">Contact</h4>
+                                    <ul>
+                                        <li>
+                                            259, Islamic Center, Center Hall Main Street, Las Vagas, USA
+                                        </li>
+                                        <li>
+                                            <a href="callto://+01254365785">01254 365 785 (toll free)</a>
+                                            <a href="callto://+02157587452">02157 587 452</a>
+                                        </li>
+                                        <li>
+                                            <a href="mailto://infomation@azan.com">infomation@azan.com</a>
+                                            <a href="mailto://www.azan.com">www.azan.com</a>
+                                        </li>
+                                    </ul>
+                                </div><!-- //Single Widgets -->
+
+                                <div class="widget-row">
+
+                                    <!-- Single Widget -->
+                                    <div class="single-widget widget--newsletter">
+                                        <h4 class="widget-title">Newsletter</h4>
+                                        <form action="#">
+                                            <input type="text" placeholder="Email here">
+                                            <button type="submit"><i class="fa fa-paper-plane-o"></i></button>
+                                        </form>
+                                    </div><!-- //Single Widget -->
+                                    <!-- Single Widget -->
+                                    <div class="single-widget widget--instagram">
+                                        <h4 class="widget-title">Instagram</h4>
+                                        <ul>
+                                            <li><a href="https://www.instagram.com/p/BcRw69njBbZ/?taken-by=portfolio.devitems"><img src="images/instagram-widget/1.png" alt="widget instagram"></a></li>
+                                            <li><a href="https://www.instagram.com/"><img src="images/instagram-widget/2.png" alt="widget instagram"></a></li>
+                                            <li><a href="https://www.instagram.com/"><img src="images/instagram-widget/3.png" alt="widget instagram"></a></li>
+                                        </ul>
+                                    </div><!-- //Single Widget -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- //Footer Widgets -->
+            <!-- Footer Copyright -->
+            <div class="footer__copyright bg--dark ptb--20">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <p>Copyright© <a href="#">Dars e Nizami</a>, All rights Reserved, 2021</p>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="footer__payment-icons text-right">
+                                <img src="images/icons/payment-method.png" alt="payment method">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- //Footer Copyright -->
+
+        </footer><!-- //Footer -->
+        <!-- Login Form -->
+        <div class="accountbox-wrapper">
+            <div class="accountbox text-left">
+                <ul class="nav accountbox__filters" id="myTab" role="tablist">
+                    <li>
+                        <a class="active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
+                    </li>
+                    <li>
+                        <a id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Register</a>
+                    </li>
+                </ul>
+                <div class="accountbox__inner tab-content" id="myTabContent">
+                    <div class="accountbox__login tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <form action="#">
+                            <div class="single-input">
+                                <input type="text" placeholder="User name or email" class="cr-round cr-round--lg">
+                            </div>
+                            <div class="single-input">
+                                <input type="password" placeholder="Password" class="cr-round cr-round--lg">
+                            </div>
+                            <div class="single-input">
+                                <button type="submit" class="cr-btn cr-btn--sm cr-btn--theme cr-round cr-round--lg"><span>Go</span></button>
+                            </div>
+                            <div class="accountbox-login__others">
+                                <h6>Or login with</h6>
+                                <div class="social-icons social-icons--rounded">
+                                    <ul>
+                                        <li class="facebook"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                                        <li class="twitter"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                                        <li class="pinterest"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="accountbox__register tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <form action="#">
+                            <div class="single-input">
+                                <input type="text" placeholder="User name" class="cr-round cr-round--lg">
+                            </div>
+                            <div class="single-input">
+                                <input type="email" placeholder="Email address" class="cr-round cr-round--lg">
+                            </div>
+                            <div class="single-input">
+                                <input type="password" placeholder="Password" class="cr-round cr-round--lg">
+                            </div>
+                            <div class="single-input">
+                                <input type="password" placeholder="Confirm password" class="cr-round cr-round--lg">
+                            </div>
+                            <div class="single-input">
+                                <button type="submit" class="cr-btn cr-btn--sm cr-btn--theme cr-round cr-round--lg"><span>Sign Up</span></button>
+                            </div>
+                        </form>
+                    </div>
+                    <span class="accountbox-close-button"><i class="icofont icofont-close"></i></span>
+                </div>
+            </div>
+        </div><!-- //Login Form -->
+        <!-- Cartbox -->
+        <div class="cartbox-wrap">
+            <div class="cartbox text-right">
+                <button class="cartbox-close"><i class="icofont icofont-close"></i></button>
+                <div class="cartbox__inner text-left">
+                    <div class="cartbox__items">
+                        <!-- Cartbox Single Item -->
+                        <div class="cartbox__item">
+                            <div class="cartbox__item__thumb">
+                                <a href="product-details.html">
+                                    <img src="images/product/small-thumbnail/1.png" alt="small thumbnail">
+                                </a>
+                            </div>
+                            <div class="cartbox__item__content">
+                                <h5><a href="product-details.html" class="product-name">Prayer Cap</a></h5>
+                                <p>Qty: <span>01</span></p>
+                                <span class="price">$15</span>
+                            </div>
+                            <button class="cartbox__item__remove">
+                                <i class="icofont icofont-ui-delete"></i>
+                            </button>
+                        </div><!-- //Cartbox Single Item -->
+                        <!-- Cartbox Single Item -->
+                        <div class="cartbox__item">
+                            <div class="cartbox__item__thumb">
+                                <a href="product-details.html">
+                                    <img src="images/product/small-thumbnail/2.png" alt="small thumbnail">
+                                </a>
+                            </div>
+                            <div class="cartbox__item__content">
+                                <h5><a href="product-details.html" class="product-name">Attar Perfume</a></h5>
+                                <p>Qty: <span>01</span></p>
+                                <span class="price">$25</span>
+                            </div>
+                            <button class="cartbox__item__remove">
+                                <i class="icofont icofont-ui-delete"></i>
+                            </button>
+                        </div><!-- //Cartbox Single Item -->
+                        <!-- Cartbox Single Item -->
+                        <div class="cartbox__item">
+                            <div class="cartbox__item__thumb">
+                                <a href="product-details.html">
+                                    <img src="images/product/small-thumbnail/3.png" alt="small thumbnail">
+                                </a>
+                            </div>
+                            <div class="cartbox__item__content">
+                                <h5><a href="product-details.html" class="product-name">Special T-shirt</a></h5>
+                                <p>Qty: <span>01</span></p>
+                                <span class="price">$30</span>
+                            </div>
+                            <button class="cartbox__item__remove">
+                                <i class="icofont icofont-ui-delete"></i>
+                            </button>
+                        </div><!-- //Cartbox Single Item -->
+                    </div>
+                    <div class="cartbox__total">
+                        <ul>
+                            <li><span class="cartbox__total__title">Subtotal</span><span class="price">$70</span></li>
+                            <li class="shipping-charge"><span class="cartbox__total__title">Shipping Charge</span><span class="price">$05</span></li>
+                            <li class="grandtotal">Total<span class="price">$75</span></li>
+                        </ul>
+                    </div>
+                    <div class="cartbox__buttons">
+                        <a href="cart.html" class="cr-btn cr-btn--transparent"><span>View cart</span></a>
+                        <a href="checkout.html" class="cr-btn cr-btn--theme"><span>Checkout</span></a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- //Cartbox -->
     </div>
-</div>
+
+    @*<div class="sidebar">
+            <NavMenu />
+        </div>
+
+        <div class="main">
+            <div class="top-row px-4">
+                <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+            </div>
+
+            <div class="content px-4">
+                @Body
+            </div>
+        </div>*@

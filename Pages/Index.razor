@@ -1,7 +1,94 @@
 ﻿@page "/"
+@using DarseNizami.Data
+@inject DNService dnService
+@code {
+    private List<DNViewModel> dnModel;
 
-<h1>Hello, world!</h1>
+    protected override async Task OnInitializedAsync()
+    {
+        dnModel = await dnService.GetDNBooksAsync();
+    }
+}
 
-Welcome to your new app.
+    <main class="page-content">
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+      
+        <!-- Upcoming Events -->
+        <!-- Team Area -->
+        <section class="cr-section team-area ptb--15 bg--white">
+            <div class="container">
+
+                <div class="row">
+                    @if (dnModel == null)
+                    {
+                        <p><em>Loading...</em></p>
+                    }
+                    else
+                    {
+
+                        @foreach (var model in dnModel)
+                        {
+                            <!-- Single Team -->
+                            <div class="col-lg-6 col-md-6 col-xl-3">
+                                <figure class="team-member wow fadeInUp">
+                                    <div class="team-member__thumb">
+                                        <div class="square">
+                                            <div class="square__inner1">
+                                                <div class="square__inner2">
+                                                    <img src="@model.BookImagePath" alt="team member 1" style="width: 200px; height: 250px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <figcaption class="team-member__content">
+                                        <h3>@model.BookName</h3>
+                                        <h5>@model.AuthorName</h5>
+                                    </figcaption>
+                                </figure>
+                            </div><!-- //Single Team -->
+                            <!-- Single Team -->
+                        }
+
+                    }
+
+
+                </div>
+            </div>
+        </section><!-- //Team Area -->
+        <!--  Offer Donation Area -->
+        <div class="offer-donation-area bg--pattern ptb--90">
+            <div class="offer-donation__inner d-flex flex-wrap flex-lg-nowrap align-items-center">
+                <div class="offer-donation__offer offer d-flex align-items-center flex-wrap flex-sm-nowrap">
+                    <div class="offer__thumb text-lg-center">
+                        <img class="wow fadeInLeft" src="images/others-png/offer-thumb-small.png" alt="offer thumb">
+                    </div>
+                    <div class="offer__content text-center">
+                        <h2>Special Discount on...</h2>
+                        <h4>Hajj & Umrah package </h4>
+                        <img src="images/others-png/kaba-small.png" alt="kaba">
+                        <div class="offer__content__button">
+                            <a href="contact.html" class="cr-btn cr-btn--transparent cr-btn--sm"><span>Contact Us</span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="offer-donatino__donation">
+                    <div class="donation-wantend text-center">
+                        <h2>Donation wanted for...</h2>
+                        <h5>Mosque development & kid’s school</h5>
+                        <p>Islam is the know how to pursue pleasure rationally encounter consequences that are extremely painful again is there anyone who loves or pursues or desires to obtain pain of itself</p>
+                        <div class="donation-wantend__form">
+                            <form action="#">
+                                <input type="text" placeholder="Your amount here">
+                                <button class="cr-btn cr-btn--black"><span>DONATE NOW</span></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- // Offer Donation Area -->
+        @*<h1>Hello, world!</h1>
+
+        Welcome to your new app.
+
+        <SurveyPrompt Title="How is Blazor working for you?" />*@
+    </main>
