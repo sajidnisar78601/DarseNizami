@@ -9,86 +9,153 @@
         dnModel = await dnService.GetDNBooksAsync();
     }
 }
-
-    <main class="page-content">
-
-      
-        <!-- Upcoming Events -->
-        <!-- Team Area -->
-        <section class="cr-section team-area ptb--15 bg--white">
-            <div class="container">
-
-                <div class="row">
-                    @if (dnModel == null)
-                    {
-                        <p><em>Loading...</em></p>
-                    }
-                    else
-                    {
-
-                        @foreach (var model in dnModel)
-                        {
-                            <!-- Single Team -->
-                            <div class="col-lg-6 col-md-6 col-xl-3">
-                                <figure class="team-member wow fadeInUp">
-                                    <div class="team-member__thumb">
-                                        <div class="square">
-                                            <div class="square__inner1">
-                                                <div class="square__inner2">
-                                                    <img src="@model.BookImagePath" alt="team member 1" style="width: 200px; height: 250px;">
-                                                </div>
-                                            </div>
-                                        </div>
+<div class="full_bg">
+    <!-- header inner -->
+    <div class="section">
+        <!-- carousel code -->
+        <div id="banner1" class="carousel slide slider_main">
+            <ol class="carousel-indicators ">
+                <li data-target="#banner1" data-slide-to="0" class="indicator-li-1">01</li>
+                <li data-target="#banner1" data-slide-to="1" class="">02</li>
+                <li data-target="#banner1" data-slide-to="2" class="active">03</li>
+            </ol>
+            <div class="carousel-inner">
+                <!-- first slide -->
+                <div class="carousel-item active">
+                    <div class="carousel-caption cuplle">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="photog">
+                                        <h1>Dars e Nizami<br>Learning</h1>
+                                        <a class="read_more" href="javascript:void(0)">Read More</a>
+                                        <a class="read_more" href="about.html">About Us</a>
                                     </div>
-                                    <figcaption class="team-member__content">
-                                        <h3>@model.BookName</h3>
-                                        <h5>@model.AuthorName</h5>
-                                    </figcaption>
-                                </figure>
-                            </div><!-- //Single Team -->
-                            <!-- Single Team -->
-                        }
-
-                    }
-
-
-                </div>
-            </div>
-        </section><!-- //Team Area -->
-        <!--  Offer Donation Area -->
-        <div class="offer-donation-area bg--pattern ptb--90">
-            <div class="offer-donation__inner d-flex flex-wrap flex-lg-nowrap align-items-center">
-                <div class="offer-donation__offer offer d-flex align-items-center flex-wrap flex-sm-nowrap">
-                    <div class="offer__thumb text-lg-center">
-                        <img class="wow fadeInLeft" src="images/others-png/offer-thumb-small.png" alt="offer thumb">
-                    </div>
-                    <div class="offer__content text-center">
-                        <h2>Special Discount on...</h2>
-                        <h4>Hajj & Umrah package </h4>
-                        <img src="images/others-png/kaba-small.png" alt="kaba">
-                        <div class="offer__content__button">
-                            <a href="contact.html" class="cr-btn cr-btn--transparent cr-btn--sm"><span>Contact Us</span></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="offer-donatino__donation">
-                    <div class="donation-wantend text-center">
-                        <h2>Donation wanted for...</h2>
-                        <h5>Mosque development & kid’s school</h5>
-                        <p>Islam is the know how to pursue pleasure rationally encounter consequences that are extremely painful again is there anyone who loves or pursues or desires to obtain pain of itself</p>
-                        <div class="donation-wantend__form">
-                            <form action="#">
-                                <input type="text" placeholder="Your amount here">
-                                <button class="cr-btn cr-btn--black"><span>DONATE NOW</span></button>
-                            </form>
+                <!-- second slide -->
+                <div class="carousel-item">
+                    <div class="carousel-caption cuplle">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="photog">
+                                        <h1>Dars e Nizami<br>Learning</h1>
+                                        <a class="read_more" href="javascript:void(0)">Read More</a>
+                                        <a class="read_more" href="about.html">About Us</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- third slide -->
+                <div class="carousel-item">
+                    <div class="carousel-caption cuplle">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="photog">
+                                        <h1>Dars e Nizami<br>Learning</h1>
+                                        <a class="read_more" href="javascript:void(0)">Read More</a>
+                                        <a class="read_more" href="about.html">About Us</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div><!-- // Offer Donation Area -->
-        @*<h1>Hello, world!</h1>
+            <!-- controls -->
+            <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
 
-        Welcome to your new app.
 
-        <SurveyPrompt Title="How is Blazor working for you?" />*@
-    </main>
+
+</div>
+<!-- end banner -->
+<!-- about -->
+<div class="about">
+    <div class="container_width">
+        <div class="row d_flex">
+            <div class="col-md-7">
+                <div class="titlepage text_align_left">
+                    <h2>About Dars e Nizami </h2>
+                    <p>
+                        Dars e Nizami gives you enhanced learning material for all the levels. Be a part of learning journey.
+                    </p>
+                    <a class="read_more" href="about.html">About More</a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="about_img text_align_center">
+                    <figure><img src="images/about.png" alt="#" /></figure>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- end about -->
+<!-- coronata -->
+<div class="coronata">
+    <div class="container">
+        <div class="row d_flex grid">
+            <div class="col-md-7">
+                <div class="coronata_img text_align_center">
+                    <figure><img src="images/Dars-e-Nizami_pdf_books.svg" alt="#" /></figure>
+                </div>
+            </div>
+            <div class="col-md-5 oder1">
+                <div class="titlepage text_align_left">
+                    <h2>Dars e Nizami what it is?</h2>
+                    <p>
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using
+                    </p>
+                    <a class="read_more" href="about.html">About More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end coronata -->
+<!-- cases -->
+<div class="cases">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage text_align_center ">
+                    <h2>Dars e Nizami Books</h2>
+                    <p>making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful</p>
+                </div>
+            </div>
+        </div>
+        <div class="row d_flex">
+            @foreach (var model in dnModel)
+            {
+                <div class=" col-md-4">
+                    <div class="latest text_align_center">
+                        <figure><img src="@model.BookImagePath" alt="#" style="width:200px;height:250px"/></figure>
+                        <a class="read_more" href="/Lectures?bookID=@model.BookID">Read More</a>
+                        <div class="nostrud">
+                            <h3>@model.BookName</h3>
+                            <p>@model.AuthorName</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            </div>
+    </div>
+</div>
+<!-- end cases -->

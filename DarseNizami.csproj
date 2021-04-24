@@ -7,6 +7,11 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.Sqlite" Version="5.0.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\DN\" />
   </ItemGroup>
 
 </Project>

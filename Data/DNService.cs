@@ -61,5 +61,7 @@ inner join Darajat d on b.DarajahID = d.DarajahID", db);
            
             return Task.FromResult(lstDN);
         }
+
+        
     }
 }

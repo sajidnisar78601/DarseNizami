@@ -5,34 +5,41 @@
     Layout = null;
 }
 
-<!doctype html>
-<html class="no-js" lang="zxx">
+<!DOCTYPE html>
+<html lang="en">
 
 
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
+    <!-- basic -->
     <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dars e Nizami</title>
-    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- mobile metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="images/favicon.ico">
-    <link rel="apple-touch-icon" href="images/icon.png">
-
-    <!-- Google font (font-family: 'Hind', sans-serif;) -->
-    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/plugins.css">
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Cusom css -->
-    <link rel="stylesheet" href="css/custom.css">
-
-    <!-- Modernizer js -->
-    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Dars e Nizami</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="DN/css/bootstrap.min.css">
+    <!-- style css -->
+    <link rel="stylesheet" href="DN/css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="DN/css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="DN/images/fevicon.html" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="../../netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="DN/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <link rel="stylesheet" href="../../rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+    <!--JPlayer-->
+    <link rel="stylesheet" href="css/jplayer/jplayer.pink.flag.min.css">
 </head>
 <body>
     <app>
@@ -52,13 +59,74 @@
 
 
     <!-- JS Files -->
-    <script src="js/vendor/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/plugins.js"></script>
-    <script src="js/PrayTimes.js"></script>
-    <script src="js/active.js"></script>
-    <script src="js/scripts.js"></script>
+    @* <script src="js/vendor/jquery-3.2.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/PrayTimes.js"></script>
+        <script src="js/active.js"></script>
+        <script src="js/scripts.js"></script>*@
+
+    <!-- Javascript files-->
+    @*<script src="DN/js/jquery.min.js"></script>*@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="DN/js/bootstrap.bundle.min.js"></script>
+    <script src="../../cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+    <script src="DN/js/owl.carousel.min.js"></script>
+    <script src="DN/js/custom.js"></script>
+
+    <script src="js/jplayer/jquery.jplayer.min.js"></script>
+    <script src="js/jplayer/jplayer.playlist.min.js"></script>
+
     <script src="_framework/blazor.server.js"></script>
+
+    <script>
+        window.loadJPlayer = () => {
+
+            //$.get("http://www.freeenergymedia.com/getxml2.php", function (data) {
+            //    // Only here you should use the data variable as it is here and only here
+            //    // that it is assigned
+
+            //    new jPlayerPlaylist({
+            //        jPlayer: "#jquery_jplayer_2",
+            //        cssSelectorAncestor: "#jp_container_2"
+            //    }, data, {
+            //        swfPath: "../../dist/jplayer",
+            //        supplied: "oga, mp3",
+            //        wmode: "window",
+            //        useStateClassSkin: true,
+            //        autoBlur: false,
+            //        smoothPlayBar: true,
+            //        keyEnabled: true
+            //    });
+            //});
+
+            new jPlayerPlaylist({
+                jPlayer: "#jquery_jplayer_2",
+                cssSelectorAncestor: "#jp_container_2"
+            }, [
+                {
+                    title: "Sabaq--001-----Ibtida--------06-10-10.MP3",
+                    mp3: "https://archive.org/details/Sabaq050Page065211107/Sabaq--001-----Ibtida--------06-10-10.MP3",
+                    oga: "https://archive.org/details/Sabaq050Page065211107/Sabaq--001-----Ibtida--------06-10-10.OGG"
+                },
+                {
+                    title: "Sabaq--001-----Ibtida--------06-10-10.MP3",
+                    mp3: "https://archive.org/details/Sabaq050Page065211107/Sabaq--001-----Ibtida--------06-10-10.MP3",
+                    oga: "https://archive.org/details/Sabaq050Page065211107/Sabaq--001-----Ibtida--------06-10-10.OGG"
+                }
+            ], {
+                swfPath: "../../dist/jplayer",
+                supplied: "oga, mp3",
+                wmode: "window",
+                useStateClassSkin: true,
+                autoBlur: false,
+                smoothPlayBar: true,
+                keyEnabled: true
+            });
+        };
+    </script>
+
 </body>
 </html>

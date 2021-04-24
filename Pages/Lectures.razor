@@ -1,0 +1,101 @@
+﻿@page "/Lectures"
+@inject NavigationManager NavManager
+@inject IJSRuntime JS;
+@using DarseNizami.Data
+@using Microsoft.AspNetCore.WebUtilities
+@inject LecturesServiceController lectureService
+@code {
+    private List<Lecture> lectureModel;
+
+    protected override async Task OnInitializedAsync()
+    {
+        int bookID = 0;
+        var uri = NavManager.ToAbsoluteUri(NavManager.Uri);
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("bookID", out var _bookID))
+        {
+            bookID = Convert.ToInt32(_bookID);
+        }
+        lectureModel = await lectureService.GetBookLecturesByIdAsync(bookID);
+
+       // await JS.InvokeVoidAsync("loadJPlayer");
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        await JS.InvokeVoidAsync("loadJPlayer");
+    }
+}
+
+
+
+    <main class="page-content">
+        <div id="jquery_jplayer_2" class="jp-jplayer"></div>
+        <div id="jp_container_2" class="jp-audio" role="application" aria-label="media player">
+            <div class="jp-type-playlist">
+                <div class="jp-gui jp-interface">
+                    <div class="jp-volume-controls">
+                        <button class="jp-mute" role="button" tabindex="0">mute</button>
+                        <button class="jp-volume-max" role="button" tabindex="0">max volume</button>
+                        <div class="jp-volume-bar">
+                            <div class="jp-volume-bar-value"></div>
+                        </div>
+                    </div>
+                    <div class="jp-controls-holder">
+                        <div class="jp-controls">
+                            <button class="jp-previous" role="button" tabindex="0">previous</button>
+                            <button class="jp-play" role="button" tabindex="0">play</button>
+                            <button class="jp-stop" role="button" tabindex="0">stop</button>
+                            <button class="jp-next" role="button" tabindex="0">next</button>
+                        </div>
+                        <div class="jp-progress">
+                            <div class="jp-seek-bar">
+                                <div class="jp-play-bar"></div>
+                            </div>
+                        </div>
+                        <div class="jp-current-time" role="timer" aria-label="time">&nbsp;</div>
+                        <div class="jp-duration" role="timer" aria-label="duration">&nbsp;</div>
+                        <div class="jp-toggles">
+                            <button class="jp-repeat" role="button" tabindex="0">repeat</button>
+                            <button class="jp-shuffle" role="button" tabindex="0">shuffle</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="jp-playlist">
+                    <ul>
+                        <li>&nbsp;</li>
+                    </ul>
+                </div>
+                <div class="jp-no-solution">
+                    <span>Update Required</span>
+                    To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                </div>
+            </div>
+        </div>
+
+        @if (lectureModel == null || lectureModel.Count == 0)
+        {
+            <p><em>No Lectures Found.</em></p>
+        }
+        else
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Duration</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var model in lectureModel)
+                    {
+                        <tr>
+                            <td>@model.LectureName</td>
+                            <td>@model.LectureDuration</td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </main>
